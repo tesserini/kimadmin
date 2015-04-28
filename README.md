@@ -73,3 +73,13 @@ Follow the instructions below to install the script.
 Go to the rats.inc.php file -- located in the "1.2" folder in your "kimadmin" folder -- and edit the variables the file tells you to edit. There's a "STOP RIGHT HERE" note when the editing process ends in the file, so you need only edit the database variable; the table prefix and database engine variables are optional.
 
 > Many people have complained of the database not connecting despite their details being correct; this is, nine times out of ten, due to the database engine you've chosen. If you've chosen 'mysqli' or 'pdo', then select the 'mysql' engine, and your database problems should go away. :')
+
+* Once edited, upload all the files in your folder onto your site through your FTP program of choice. I'd recommend you upload these to subfolder.
+
+> Example: http://yoursite.com/kim_admin_folder/
+
+The /example folder does not need to be uploaded, though it has a required file (fig.inc.php) in the folder, as well as code snippets for you to take examples from.
+
+* Once uploaded, run install.php in a browser of your choice.
+ 
+> Example: http://yoursite.com/kim_admin_folder/install.php
