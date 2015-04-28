@@ -69,17 +69,11 @@ I have tested KIM Admin under the following versions of PHP and Mysql. KIM Admin
 Follow the instructions below to install the script.
 
 * Download KIM Admin (which, if you're viewing this file on your computer, you've already done), and unzip the .zip file into a folder name of your choice. For example's sake, we're unzipping into a folder named "kimadmin".
-
-Go to the rats.inc.php file -- located in the "1.2" folder in your "kimadmin" folder -- and edit the variables the file tells you to edit. There's a "STOP RIGHT HERE" note when the editing process ends in the file, so you need only edit the database variable; the table prefix and database engine variables are optional.
-
-> Many people have complained of the database not connecting despite their details being correct; this is, nine times out of ten, due to the database engine you've chosen. If you've chosen 'mysqli' or 'pdo', then select the 'mysql' engine, and your database problems should go away. :')
-
+* Go to the rats.inc.php file -- located in the "1.2" folder in your "kimadmin" folder -- and edit the variables the file tells you to edit. There's a "STOP RIGHT HERE" note when the editing process ends in the file, so you need only edit the database variable; the table prefix and database engine variables are optional.
+* > Many people have complained of the database not connecting despite their details being correct; this is, nine times out of ten, due to the database engine you've chosen. If you've chosen 'mysqli' or 'pdo', then select the 'mysql' engine, and your database problems should go away. :')
 * Once edited, upload all the files in your folder onto your site through your FTP program of choice. I'd recommend you upload these to subfolder.
-
-> Example: http://yoursite.com/kim_admin_folder/
-
-The /example folder does not need to be uploaded, though it has a required file (fig.inc.php) in the folder, as well as code snippets for you to take examples from.
-
+* > Example: http://yoursite.com/kim_admin_folder/
+* The /example folder does not need to be uploaded, though it has a required file (fig.inc.php) in the folder, as well as code snippets for you to take examples from.
 * Once uploaded, run install.php in a browser of your choice.
- 
-> Example: http://yoursite.com/kim_admin_folder/install.php
+* > Example: http://yoursite.com/kim_admin_folder/install.php
+* Before running the script, once again, make sure all the variables in your config file are set correctly. Run it, and an success message should appear. Once the installation finishes, delete the file from your server immediately! This is EXTREMELY important. Should you forget to delete the file, the script will exit and display an error message until you delete the file from your server.
