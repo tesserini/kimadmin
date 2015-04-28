@@ -121,3 +121,80 @@ Please note the use of `$_GET` instead of `$_SERVER['QUERY_STRING']`, like above
 <collective.php?section=kim> for an example -- we should go with the use of `$_GET` at all times. Using `$_GET` let's the server know we're looking for the specific query string of 'page' in the URL, and should the query match, our page will display!
 
 For more information on query strings, better security measures for query strings, and more examples, please visit <http://liebenkode.in/articles/querystrings/>
+
+> How do I change the look of my members list in show_members.php?
+
+You can change the look of your members list by going into <options.php> in your admin panel, going to the 'Templates' subpage located on the left, and editing your templates there. There is currently -- as of version 1.2 -- a template for the header, footer, and body of your members list. 
+
+For example, let's say you want to display your members in a table. The header template would look something like this:
+
+```
+<table class="membersList">
+<thead><tr>
+ <th>Name</th>
+ <th>Details</th>
+ <th>Listing</th>
+</tr></thead>
+```
+
+Your body would look something like this:
+
+```
+<tbody><tr>
+ <td>{name}</td>
+ <td>{email}{text:@} / {url}</td>
+ <td>{listing}</td>
+</tr></tbody>
+```
+
+And your footer would look like this:
+
+```
+</table>
+```
+
+## Customisation
+Once you've installed the script, there's finally the includes. With the .zip file came a folder named "example", which is NOT required to upload, but holds example pages. It also gives you a feel of what the front-end will look like. This is what an include will look like:
+
+```
+ require("fig.inc.php");
+ require(KAPATH . "show-join.php");
+```
+
+The pages that can be included are: <show-join.php>, <show-members.php>, <show-update.php>, <show-stats.php>, <show-reset.php>, and <fig.inc.php>
+
+> The fig.inc.php file included in /example is REQUIRED to include any of listed files. To find all code snippets of them, go to codes.php in your admin panel. 
+
+You can customise the script through CSS using these classes and IDs that are already defined.
+
+### #show-join, #show-update
+> DIV id in show-join.php and show-update.php, in which you can apply any special form or paragraph styles to these particular pages only. Example:
+
+```
+#show-join input, 
+#show-update input, 
+#show-update textarea {
+ border: 1px solid #DDD;
+ font: 11pt Arial, "Trebuchet MS", Tahoma, Verdana, sans-serif;
+ padding: 0.5% 1%;
+}
+
+#show-join p {
+ line-height: 19pt;
+ margin: 0 0 5px 0;
+}
+```
+
+...and so on!
+
+> To edit your statistics look, go to options.php in your Admin Panel.
+
+## Credits
+- In the previous versions of KIM Admin, a lot of the SPAM measures were taken as ideas from Jem's free mail form: <http://jemsmailform.com/> Most of the measures have since been altered -- especially the use of 'bad' words and SPAM bots -- as well as new measures not seen in Jem's form (such as the math problem, and my own preg_match() functions for e-mail and URL checks). The point system included in version 1.2 is from an earlier version of my script Listing Admin and *not* from Jem's current version of the mail form.
+
+All that being said, many, many thanks to Jem for being the amazing PHP developer that she is -- she is one of three people that inspire me to take such cautious (if abundant on my part!) measures in security and form checking. The script land would truly be a wonderful place if developers were more like Jem; thank you so much, Jem! :'))))
+ 
+- MicroAkismet <http://vanhegan.net/software/akismet/>
+
+## Special Mention
+If you find you're unsatisfied with KIM Admin, and you're using Enthusiast as a fanlisting script (much less phpFan itself), I'd recommend using the phpFan add-on for KIM found here: <http://scripts.ishallnotcare.org/phpfan-add-ons/> As of the current version, it only caters to users with Enthusiast, though it's been mentioned this will change in the future.
