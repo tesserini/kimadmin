@@ -64,3 +64,12 @@ I have tested KIM Admin under the following versions of PHP and Mysql. KIM Admin
   * A couple of tweaks and fixes to <func.inc.php>
   * The <values.php> file was renamed to <listings.php>, and will be deleted when upgrading.
   * SPAM protection tweaked; the script now checks for bbCode in the form and only has *one* JavaScript field, if enabled.
+
+## Installation
+Follow the instructions below to install the script.
+
+* Download KIM Admin (which, if you're viewing this file on your computer, you've already done), and unzip the .zip file into a folder name of your choice. For example's sake, we're unzipping into a folder named "kimadmin".
+
+Go to the rats.inc.php file -- located in the "1.2" folder in your "kimadmin" folder -- and edit the variables the file tells you to edit. There's a "STOP RIGHT HERE" note when the editing process ends in the file, so you need only edit the database variable; the table prefix and database engine variables are optional.
+
+> Many people have complained of the database not connecting despite their details being correct; this is, nine times out of ten, due to the database engine you've chosen. If you've chosen 'mysqli' or 'pdo', then select the 'mysql' engine, and your database problems should go away. :')
