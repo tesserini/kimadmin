@@ -14,7 +14,8 @@ I have tested KIM Admin under the following versions of PHP and Mysql. KIM Admin
 * 5.2.8
 * 5.3+
 * 5.4
-*MySQL* 
+
+*MySQL*
 * 5.0.51b
 * 5.1.30
 * 5.1.33
