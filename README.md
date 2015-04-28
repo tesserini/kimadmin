@@ -157,8 +157,10 @@ And your footer would look like this:
 Once you've installed the script, there's finally the includes. With the .zip file came a folder named "example", which is NOT required to upload, but holds example pages. It also gives you a feel of what the front-end will look like. This is what an include will look like:
 
 ```
+<?php
  require("fig.inc.php");
  require(KAPATH . "show-join.php");
+?>
 ```
 
 The pages that can be included are: <show-join.php>, <show-members.php>, <show-update.php>, <show-stats.php>, <show-reset.php>, and <fig.inc.php>
@@ -192,7 +194,7 @@ You can customise the script through CSS using these classes and IDs that are al
 ## Credits
 - In the previous versions of KIM Admin, a lot of the SPAM measures were taken as ideas from Jem's free mail form: <http://jemsmailform.com/> Most of the measures have since been altered -- especially the use of 'bad' words and SPAM bots -- as well as new measures not seen in Jem's form (such as the math problem, and my own preg_match() functions for e-mail and URL checks). The point system included in version 1.2 is from an earlier version of my script Listing Admin and *not* from Jem's current version of the mail form.
 
-All that being said, many, many thanks to Jem for being the amazing PHP developer that she is -- she is one of three people that inspire me to take such cautious (if abundant on my part!) measures in security and form checking. The script land would truly be a wonderful place if developers were more like Jem; thank you so much, Jem! :'))))
+- All that being said, many, many thanks to Jem for being the amazing PHP developer that she is -- she is one of three people that inspire me to take such cautious (if abundant on my part!) measures in security and form checking. The script land would truly be a wonderful place if developers were more like Jem; thank you so much, Jem! :'))))
  
 - MicroAkismet <http://vanhegan.net/software/akismet/>
 
