@@ -8,3 +8,8 @@ The credit link on the forms and members list can be removed, as long as you abi
 
 Requirements
 I have tested KIM Admin under the following versions of PHP and Mysql. KIM Admin was also tested under the Mysqli and PDO drivers.
+
+ > PHP 
+   > 5.2.6, 5.2.8, 5.3+, 5.4
+ > MySQL 
+   > 5.0.51b, 5.1.30, 5.1.33, 5.3
